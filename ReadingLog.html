@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reading Log Entry Form</title>
+</head>
+<body>
+    <h2>Reading Log Entry Form</h2>
+    <form action="insert_reading_log.php" method="post">
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" required><br><br>
+
+        <label for="start_time">Start Time:</label>
+        <input type="time" name="start_time" id="start_time" required><br><br>
+		
+		<label for="end_time">End Time:</label>
+        <input type="time" name="end_time" id="end_time" required><br><br>
+
+        <label for="book_title">Book Title:</label>
+        <input type="text" name="book_title" id="book_title" required><br><br>
+
+        <label for="start_page">Start Page:</label>
+        <input type="number" name="start_page" id="start_page" required><br><br>
+
+        <label for="stop_page">Stop Page:</label>
+        <input type="number" name="stop_page" id="stop_page" required><br><br>
+
+        <label for="pages_read">Pages Read:</label>
+        <input type="number" name="pages_read" id="pages_read" required><br><br>
+
+        <input type="submit" value="Add Reading Log Entry">
+    </form>
+</body>
+</html>
