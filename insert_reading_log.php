@@ -15,15 +15,15 @@ if ($conn->connect_error) {
 
 // Process form data
 $date = $_POST['date'];
-$time = $_POST['start_time'];
-$time = $_POST['end_time'];
-$book_title = $_POST['book_title'];
+$start_time = $_POST['start_time'];
+$end_time = $_POST['end_time'];
+$book_id = $_POST['book_id'];
 $start_page = $_POST['start_page'];
 $stop_page = $_POST['stop_page'];
 $pages_read = $_POST['pages_read'];
 
 // Insert data into the "reading_log" table
-$sql = "INSERT INTO reading_log (date, start_time, end_time, book_title, start_page, stop_page, pages_read) VALUES ('$date', '$time', '$book_title', '$start_page', '$stop_page', '$pages_read')";
+$sql = "INSERT INTO reading_log (date, start_time, end_time, book_id, start_page, stop_page, pages_read) VALUES ('$date', '$start_time', '$end_time' ,'$book_id', '$start_page', '$stop_page', '$pages_read')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Reading log entry added successfully.";
